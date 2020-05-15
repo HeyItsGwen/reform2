@@ -1,2 +1,20 @@
 <!DOCTYPE html>
 <h1>NEW</h1>
+
+<%= form_for @user do |form| %>
+<table>
+  <tr>
+    <th>Username -></th>
+    <th><%= form.text_field :username %></th>
+  </tr>
+  <tr>
+    <th>Email -></th>
+    <th><%= form.text_field :email %></th>
+  </tr>
+  <tr>
+    <th>Password -></th>
+    <th><%= form.text_field :password %></th>
+  </tr>
+</table>
+<%= form.submit "Create new User" %>
+<% end %>
